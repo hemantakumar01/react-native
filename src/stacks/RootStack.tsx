@@ -29,8 +29,16 @@ const TabsStack = () => {
   const Tabs = createBottomTabNavigator();
   return (
     <Tabs.Navigator screenOptions={{headerShown: true}}>
-      <Tabs.Screen name="HomeTabs" component={HomeTabStack} />
-      <Tabs.Screen name="CategoriesTabs" component={CategoriesTabs} />
+      <Tabs.Screen
+        options={{title: 'Home'}}
+        name="HomeTabs"
+        component={HomeTabStack}
+      />
+      <Tabs.Screen
+        name="CategoriesTabs"
+        component={CategoriesTabs}
+        options={{title: 'Categories'}}
+      />
       <Tabs.Screen name="OrderTabs" component={OrderTabs} />
       <Tabs.Screen name="AccountsTabs" component={AccountsTabs} />
     </Tabs.Navigator>
